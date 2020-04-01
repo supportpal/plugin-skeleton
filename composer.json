@@ -1,5 +1,5 @@
 {
-    "name": ":vendor/:package_name",
+    "name": ":vendor/skeleton",
     "require": {},
     "config": {
         "prepend-autoloader": false
