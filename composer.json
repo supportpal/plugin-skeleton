@@ -1,0 +1,12 @@
+{
+    "name": ":vendor/:package_name",
+    "require": {},
+    "config": {
+        "prepend-autoloader": false
+    },
+    "authors": [
+        {
+            "name": ":author_name"
+        }
+    ]
+}

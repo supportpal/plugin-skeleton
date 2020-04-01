@@ -1,0 +1,35 @@
+{% extends 'operator.' ~ template ~ '.index' %}
+
+{% block title %}
+    {{ Lang.get('Skeleton::lang.name') }}
+{% endblock %}
+
+{% block content %}
+
+    {{ form_model(fields, {'method': 'POST', 'route': [ 'plugin.skeleton.settings.update' ], 'class': 'validate'}) }}
+
+        <div class="sp-form-container">
+
+            <div class="sp-form-row">
+                {{ form_label('setting', Lang.get('Skeleton::lang.setting')) }}
+                <div class="sp-input-container">
+                    {{ form_text('setting') }}
+                    <div class="sp-description">{{ Lang.get('Skeleton::lang.setting_desc') }}</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sp-form-button">
+            {{ form_submit(Lang.get('general.save')) }}
+        </div>
+
+    {{ form_close() }}
+
+{% endblock %}
+
+{% block scripts_footer %}
+    {% if jsValidator|default is not empty %}
+        {{ jsValidator|raw }}
+    {% endif %}
+{% endblock %}
