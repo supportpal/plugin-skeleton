@@ -20,7 +20,8 @@ return [
     | Plugin URI (optional)
     |--------------------------------------------------------------------------
     |
-    | The home page of the plugin.
+    | The home page of the plugin - where you may store documentation or
+    | general information about the plugin.
     |
     */
 
@@ -56,7 +57,8 @@ return [
     | Plugin Author (optional)
     |--------------------------------------------------------------------------
     |
-    | The name of the plugin author. More than one author may be listed as a string.
+    | The name of the plugin author. More than one author may be listed as a
+    | string.
     |
     */
 
@@ -72,5 +74,16 @@ return [
     */
 
     'author_uri' => ':author_uri',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Plugin Icon (optional)
+    |--------------------------------------------------------------------------
+    |
+    | An icon for the plugin. Set the full path to an image on the file system.
+    |
+    */
+
+    'icon' => '',
 
 ];
