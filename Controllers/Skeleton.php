@@ -96,15 +96,11 @@ class Skeleton extends Plugin
      */
     public function activate()
     {
-        try {
-            // Add permission.
-            $attributes = ['view' => true, 'create' => true, 'update' => true, 'delete' => true];
-            $this->addPermission('settings', $attributes, 'Skeleton::lang.permission');
+        // Add permission.
+        $attributes = ['view' => true, 'create' => true, 'update' => true, 'delete' => true];
+        $this->addPermission('settings', $attributes, 'Skeleton::lang.permission');
 
-            return true;
-        } catch (Exception $e) {
-            return false;
-        }
+        return true;
     }
 
     /**
@@ -126,16 +122,12 @@ class Skeleton extends Plugin
      */
     public function uninstall()
     {
-        try {
-            // Remove settings.
-            $this->removeSettings();
+        // Remove settings.
+        $this->removeSettings();
 
-            // Remove permission.
-            $this->removePermission('settings');
+        // Remove permission.
+        $this->removePermission('settings');
 
-            return true;
-        } catch (Exception $e) {
-            return false;
-        }
+        return true;
     }
 }
