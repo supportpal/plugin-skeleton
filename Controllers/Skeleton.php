@@ -6,7 +6,6 @@ namespace App\Plugins\Skeleton\Controllers;
 
 use App\Modules\Core\Controllers\Plugins\Plugin;
 use App\Plugins\Skeleton\Requests\SettingsRequest;
-use Exception;
 use JsValidator;
 use Lang;
 use Redirect;
