@@ -70,20 +70,15 @@ class Skeleton extends Plugin
     {
         $data = $request->all(['setting']);
 
-        try {
-            // Work through each row of data.
-            foreach ($data as $key => $value) {
-                if (! empty($value) || $value == 0) {
-                    $this->addSetting($key, $value);
-                }
+        // Work through each row of data.
+        foreach ($data as $key => $value) {
+            if (! empty($value) || $value == 0) {
+                $this->addSetting($key, $value);
             }
-
-            // All done, return with a success message.
-            Session::flash('success', Lang::get('messages.success_settings'));
-        } catch (Exception $e) {
-            // Return with a success message.
-            Session::flash('error', Lang::get('messages.error_settings'));
         }
+
+        // All done, return with a success message.
+        Session::flash('success', Lang::get('messages.success_settings'));
 
         return Redirect::route('plugin.skeleton.settings');
     }
