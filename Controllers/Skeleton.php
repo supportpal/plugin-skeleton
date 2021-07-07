@@ -1,7 +1,5 @@
 <?php
-/**
- * File Skeleton.php
- */
+
 namespace App\Plugins\Skeleton\Controllers;
 
 use App\Modules\Core\Controllers\Plugins\Plugin;
@@ -12,24 +10,12 @@ use Redirect;
 use Session;
 use TemplateView;
 
-/**
- * Class Skeleton
- *
- * @package    App\Plugins\Skeleton\Controllers
- */
 class Skeleton extends Plugin
 {
     /**
      * Plugin identifier.
      */
     const IDENTIFIER = 'Skeleton';
-
-    /**
-     * Plugin settings.
-     *
-     * @var array
-     */
-    private $settings;
 
     /**
      * Initialise the plugin.
@@ -42,9 +28,6 @@ class Skeleton extends Plugin
 
         // Register the settings page.
         $this->registerSetting('plugin.skeleton.settings');
-
-        // Get the plugin settings.
-        $this->settings = $this->getSettings();
     }
 
     /**
@@ -56,7 +39,7 @@ class Skeleton extends Plugin
     {
         return TemplateView::other('Skeleton::settings')
             ->with('jsValidator', JsValidator::formRequest(SettingsRequest::class))
-            ->with('fields', $this->settings);
+            ->with('fields', $this->settings());
     }
 
     /**
