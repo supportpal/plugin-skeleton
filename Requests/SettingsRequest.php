@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace App\Plugins\Skeleton\Requests;
+namespace Addons\Plugins\Skeleton\Requests;
 
 use App\Http\Requests\Request;
 use Lang;
