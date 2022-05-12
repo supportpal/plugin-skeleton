@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace App\Plugins\Skeleton\Controllers;
+namespace Addons\Plugins\Skeleton\Controllers;
 
+use Addons\Plugins\Skeleton\Requests\SettingsRequest;
 use App\Modules\Core\Controllers\Plugins\Plugin;
-use App\Plugins\Skeleton\Requests\SettingsRequest;
 use JsValidator;
 use Lang;
 use Redirect;
@@ -37,7 +37,7 @@ class Skeleton extends Plugin
      */
     public function getSettingsPage()
     {
-        return TemplateView::other('Skeleton::settings')
+        return TemplateView::other('Plugins#Skeleton::settings')
             ->with('jsValidator', JsValidator::formRequest(SettingsRequest::class))
             ->with('fields', $this->settings());
     }
@@ -75,7 +75,7 @@ class Skeleton extends Plugin
     {
         // Add permission.
         $attributes = ['view' => true, 'create' => true, 'update' => true, 'delete' => true];
-        $this->addPermission('settings', $attributes, 'Skeleton::lang.permission');
+        $this->addPermission('settings', $attributes, 'Plugins#Skeleton::lang.permission');
 
         return true;
     }

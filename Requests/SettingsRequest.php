@@ -1,17 +1,10 @@
-<?php
-/**
- * File SettingsRequest.php
- */
-namespace App\Plugins\Skeleton\Requests;
+<?php declare(strict_types=1);
+
+namespace Addons\Plugins\Skeleton\Requests;
 
 use App\Http\Requests\Request;
 use Lang;
 
-/**
- * Class SettingsRequest
- *
- * @package    App\Plugins\Skeleton\Requests
- */
 class SettingsRequest extends Request
 {
     /**
@@ -27,7 +20,7 @@ class SettingsRequest extends Request
     /**
      * Get the validation rules that apply to the request.
      *
-     * @return array
+     * @return mixed[]
      */
     public function rules()
     {
@@ -39,12 +32,12 @@ class SettingsRequest extends Request
     /**
      * Get the error messages for the defined validation rules.
      *
-     * @return array
+     * @return array<string,string>
      */
     public function messages()
     {
         return [
-            'setting.alpha_num' => Lang::get('Skeleton::lang.setting_alpha_num'),
+            'setting.alpha_num' => Lang::get('Plugins#Skeleton::lang.setting_alpha_num'),
         ];
     }
 }
