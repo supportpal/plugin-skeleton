@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => 'Skeleton::lang.name',
+    'name' => 'Plugins#Skeleton::lang.name',
 
     /*
     |--------------------------------------------------------------------------
@@ -37,7 +37,7 @@ return [
     |
     */
 
-    'description' => 'Skeleton::lang.description',
+    'description' => 'Plugins#Skeleton::lang.description',
 
     /*
     |--------------------------------------------------------------------------
