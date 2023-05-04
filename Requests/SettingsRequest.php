@@ -25,7 +25,7 @@ class SettingsRequest extends Request
     public function rules()
     {
         return [
-            'setting' => 'required|alpha_num',
+            'setting' => ['required', 'alpha_num'],
         ];
     }
 

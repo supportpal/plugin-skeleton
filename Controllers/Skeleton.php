@@ -4,10 +4,10 @@ namespace Addons\Plugins\Skeleton\Controllers;
 
 use Addons\Plugins\Skeleton\Requests\SettingsRequest;
 use App\Modules\Core\Controllers\Plugins\Plugin;
+use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 use JsValidator;
-use Lang;
-use Redirect;
-use Session;
 use TemplateView;
 
 class Skeleton extends Plugin
@@ -37,7 +37,7 @@ class Skeleton extends Plugin
      */
     public function getSettingsPage()
     {
-        return TemplateView::other('Plugins#Skeleton::settings')
+        return TemplateView::operator('Plugins#Skeleton::settings')
             ->with('jsValidator', JsValidator::formRequest(SettingsRequest::class))
             ->with('fields', $this->settings());
     }
