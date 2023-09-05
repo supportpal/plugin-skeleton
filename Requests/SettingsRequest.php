@@ -2,10 +2,10 @@
 
 namespace Addons\Plugins\Skeleton\Requests;
 
-use App\Http\Requests\Request;
+use App\Http\Requests\FormRequest;
 use Lang;
 
-class SettingsRequest extends Request
+class SettingsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
