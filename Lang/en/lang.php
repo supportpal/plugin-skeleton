@@ -1,15 +1,13 @@
-<?php
+<?php declare(strict_types=1);
 
 return [
 
-    "name"                  => ":package_name",
-    "description"           => ":package_description",
+    'name'                  => ':package_name',
+    'description'           => ':package_description',
 
-    "setting"               => "Setting",
-    "setting_desc"          => "A description of the setting.",
+    'setting'               => 'Setting',
+    'setting_desc'          => 'A description of the setting.',
 
-    "setting_alpha_num"     => "The setting field must contain only numbers and letters.",
-
-    "permission"            => "Manage Settings",
+    'setting_alpha_num'     => 'The setting field must contain only numbers and letters.',
 
 ];

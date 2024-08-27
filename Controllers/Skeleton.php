@@ -54,9 +54,11 @@ class Skeleton extends Plugin
 
         // Work through each row of data.
         foreach ($data as $key => $value) {
-            if (! empty($value) || $value == 0) {
-                $this->addSetting($key, $value);
+            if (empty($value) && (int) $value !== 0) {
+                continue;
             }
+
+            $this->addSetting($key, $value);
         }
 
         // All done, return with a success message.
@@ -73,10 +75,6 @@ class Skeleton extends Plugin
      */
     public function activate()
     {
-        // Add permission.
-        $attributes = ['view' => true, 'create' => true, 'update' => true, 'delete' => true];
-        $this->addPermission('settings', $attributes, 'Plugins#Skeleton::lang.permission');
-
         return true;
     }
 
@@ -101,9 +99,6 @@ class Skeleton extends Plugin
     {
         // Remove settings.
         $this->removeSettings();
-
-        // Remove permission.
-        $this->removePermission('settings');
 
         return true;
     }
