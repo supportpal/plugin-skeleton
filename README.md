@@ -23,10 +23,8 @@ to get started.
 The skeleton includes the bare minimum for a basic plugin - a controller
 with a settings page to configure the plugin.
 
-* *Commands* - https://docs.supportpal.com/current/Plugin+Development+Commands
 * *Controllers* - https://docs.supportpal.com/current/Plugin+Development+Controllers
 * *Lang* - https://docs.supportpal.com/current/Plugin+Development+Languages
-* *Reports* - https://docs.supportpal.com/current/Plugin+Development+Reports
 * *Requests* - Used to validate form submissions, https://docs.supportpal.com/current/Plugin+Development+Form+Requests
 * *Routes* - https://docs.supportpal.com/current/Plugin+Development+Routes
 * *Views* - https://docs.supportpal.com/current/Plugin+Development+Views 
